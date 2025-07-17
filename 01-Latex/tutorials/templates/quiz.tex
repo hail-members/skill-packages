@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{fancyhdr} % Included for the header.
+\usepackage[text={14cm,21cm},centering]{geometry} % Sets the width and height of the body.
+\pagestyle{fancy}
+
+% Length settings
+\newlength{\numlen}
+\settowidth{\numlen}{\sffamily 100 Points }
+\newlength{\interlen}
+\setlength{\interlen}{3mm}
+
+\newlength{\problen}
+\setlength{\problen}{\textwidth}
+\addtolength{\problen}{-\numlen}
+\addtolength{\problen}{-\interlen}
+
+% Header
+\fancyhead[L]{\textbf{MAS999 Quiz 1}}
+\fancyhead[R]{\textbf{Name:\hspace{2cm}ID:\hspace{2cm}}}
+
+% Counter setting
+\newcounter{probcnt}
+
+% Definition of the problem environment
+\newenvironment{problem}[1]{%
+\addtocounter{probcnt}{1}%
+\noindent
+\parbox[t]{\numlen}{\raggedleft{\bfseries \large \theprobcnt}\\[-2.5mm]
+\rule{\numlen}{0.2mm}\\[-0.5mm]
+\raggedleft{\sffamily {#1} Points}
+}%
+\hspace{\interlen}%
+\begin{minipage}[t]{\problen}
+}{%
+\end{minipage}
+}
+
+\begin{document}
+
+\begin{problem}{10}
+Prove that there exist no positive integers $x$, $y$, and $z$ such that
+\[
+x^3 + y^3 = z^3.
+\]
+\end{problem}
+
+\vspace{\stretch{2}} % Adjust the size of the space by changing the number.
+
+\begin{problem}{15}
+Show that every compact simply connected $3$-manifold without boundary
+is homeomorphic to $S^3$. 
+\end{problem}
+
+\vspace{\stretch{3}} % Adjust the size of the space by changing the number.
+
+\newpage % Ends the current page.
+
+\begin{problem}{20}
+Let $f \colon \mathbf{N} \to \mathbf{N}$ be given by
+\[
+f(n) :=
+\begin{cases}
+3n+1 & \text{if $n$ is odd}, \\
+n/2 & \text{if $n$ is even}.
+\end{cases}
+\]
+For any $n \in \mathbf{N}$, do we have some $k \in \mathbf{N}$ such that
+$f^{(k)}(n) = 1$? Justify your answer.
+\end{problem}
+
+
+\end{document}

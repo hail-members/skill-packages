@@ -1,0 +1,111 @@
+\documentclass[11pt]{amsart}
+\usepackage{hyperref} % For hyperlinks.
+\usepackage{enumitem} % For customizing enumerations
+\usepackage{kotex}
+\usepackage[text={17cm,21cm},centering]{geometry} % Sets the width and height of the body.
+
+% Section Title
+\newcommand{\sectitle}[1]{\noindent {\Large \bfseries {#1}} \vspace{3pt} \hrule
+\vspace{15pt}}
+% Subsection Title
+\newcommand{\subsectitle}[1]{\noindent {\large \bfseries {#1} \vspace{5pt}}}
+
+% Institution Entry
+\newcommand{\instentry}[3]{\noindent{\bfseries {#1}}\hspace{\fill}{#2}\\
+{\itshape {#3}}\vspace{15pt}}
+
+% Award Entry
+\newcommand{\awdentry}[2]{\noindent{#1}\hspace{\fill}{#2} \vspace{10pt}}
+
+% Publication Entry
+\newcommand{\pubentry}[2]{\item{\itshape #1}\\{#2}\vspace{10pt}}
+
+\begin{document}
+\title{Curriculum Vitae}
+\author{Your Name Here}
+\maketitle
+
+\sectitle{Basic Info}
+Email: \href{mailto:your@email.com}{your@email.com}
+
+Homepage: \href{https://your.homepage}{https://your.homepage}
+
+\vspace{15pt}
+
+\sectitle{Research Interests}
+Probability theory. In particular, limit theorems such as the semicircle law and the central limit theorem.
+\vspace{15pt}
+
+\sectitle{Academic Preparation}
+\instentry{KAIST, Daejeon}
+{2016--2022}
+{Ph.D.\ in Mathematical Sciences}
+
+\instentry{KAIST, Daejeon}
+{2012--2016}
+{B.S.\ in Mathematical Sciences (Second Major: Computer Science)}
+
+\sectitle{Professional Experience}
+\instentry{KAIST, Daejeon}{2016--2022}{Teaching Assistant}
+
+\sectitle{Awards}
+
+\awdentry{KAIST Department of Mathematical Sciences TA Award}{2018}
+
+
+\vspace{10pt}
+
+\sectitle{Publications}
+
+\subsectitle{Accepted Articles}
+
+\begin{enumerate}[label=\arabic*.]
+
+\pubentry{Deriving the Central Limit Theorem from the De Moivre--Laplace Theorem}
+{\href{https://doi.org/10.1016/j.spl.2021.109293}{Statistics and Probability Letters, (2022) 182} (\href{https://arxiv.org/abs/2109.09258}{arXiv:2109.09258}).}
+
+\pubentry{Inferring Grammatical Summaries of String Values}
+{\href{https://doi.org/10.1007/978-3-319-12736-1_20}
+{Asian Symposium on Programming Languages and Systems, (2014) Nov 17, 372--391}\\
+with Se-Won Kim, Jimin Park, Jeongmin Kim, and Sukyoung Ryu.}
+
+\end{enumerate}
+
+%\vspace{10pt} % Temporary
+
+\subsectitle{Other Articles}
+
+See the \href{https://your.homepage/articles/}{Articles tab on my homepage}.
+The following is the list of the articles uploaded on arXiv.
+
+\begin{enumerate}[label=\arabic*.]
+
+\pubentry{Necessary and Sufficient Conditions for Convergence
+to the Semicircle Distribution}
+{Submitted (\href{https://arxiv.org/abs/2105.09519}{arXiv:2105.09519}).}
+
+\pubentry{An Exposition on Wigner's Semicircular Law.}
+{\href{https://arxiv.org/abs/1907.12170}{arXiv:1907.12170}}
+
+\end{enumerate}
+
+\subsectitle{Videos}
+
+Go to \href{https://www.youtube.com/channel/UC4mKeoiiEqL\_wje9IgF1W5Q}
+{my YouTube channel}.
+Click \href{https://youtu.be/DNgPgv\_UH1g}{here} for an English video.
+
+
+\vspace{15pt}
+
+\sectitle{Conference Talks and Seminars}
+
+\begin{enumerate}[label=\arabic*.]
+
+\pubentry{Introduction to \LaTeX\ (slides in English and lecture in Korean)}
+{\LaTeX\ Seminar (organized by the Student Council
+of KAIST Department of Mathematical Sciences), May 2021}
+
+\end{enumerate}
+
+\end{document}

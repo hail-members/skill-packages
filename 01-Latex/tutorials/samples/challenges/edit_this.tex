@@ -1,0 +1,155 @@
+\documentclass[11pt]{amsart}
+% You can import at most two packages here.
+
+
+\theoremstyle{definition}
+\newtheorem{challenge}{Challenge}
+
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\R}{\mathbf{R}}
+% Define \barliminf here.
+
+\begin{document}
+
+\title{An Intermediate Article}
+\author{Your Name$\,_\circ$} % Put your name here.
+% Add the address, email, and abstract here.
+
+
+\maketitle
+
+Reproduce this article as closely as possible (except your name and
+email address) by filling in the designated spots in the given
+\texttt{tex} file.
+The spots are marked with comments, and you cannot edit elsewhere.
+
+\begin{challenge}[citing a 1656 paper]
+$\binom{2n}{n} \sim 4^n/\sqrt{\pi n}$ follows from
+Wallis's product formula \cite{Wallis}.
+\end{challenge}
+
+\begin{challenge}[Fatou's lemma]
+% Define \barliminf in the preamble, below the definition of \R.
+If $f_n \to f$ a.s., then
+\[ \int f \,d\mu \le \barliminf_{n\to\infty} \int f_n \,d\mu. \]
+\end{challenge}
+
+\begin{challenge}[a summation]
+% Put your code here.
+
+\end{challenge}
+
+\begin{challenge}[a superfluous statement]
+% Put your code here.
+
+\end{challenge}
+
+\begin{challenge}[the harmonic series] The harmonic series diverges.
+\begin{proof}
+% Put your code here.
+
+\end{proof}
+\end{challenge}
+
+\begin{challenge}[a symbol that doesn't exist]
+% Put your code here.
+
+\end{challenge}
+
+\begin{challenge}[Knuth's up-arrow notation]
+% Put your code here.
+
+\end{challenge}
+
+% Define the environment tfprob and possibly some lengths and counters here.
+
+
+\begin{challenge}[true/false questions]
+Answer the following with T or F.
+
+\begin{tfprob}
+There exists a well-order on $\prec$ on $\R$ such that for any $x \in \R$
+the set $\{\,y \in \R \mid y \prec x\,\}$ is countable.
+\end{tfprob}
+
+\begin{tfprob}
+Ap\'ery's constant
+\[ \zeta(3) := \sum_{n=1}^\infty \frac{1}{n^3} \]
+is transcendental.
+\end{tfprob}
+
+\begin{tfprob}
+There exists a polynomial-time algorithm that determines if a given
+graph is $3$-colorable.
+\end{tfprob}
+\end{challenge}
+
+% You may add some code here.
+
+\begin{challenge}[a popular number]
+For each $n \in \N$, let $D(n)$ be the sum of all positive divisors of $n$.
+What is $\sum_{n=1}^9 D(n)$?
+% Put your code here.
+
+\end{challenge}
+
+% You may add some code here.
+
+
+\begin{challenge}[countdown]
+% Define renumerate and \ritem here.
+
+
+A blade is aiming for the top.
+\begin{renumerate}{3}
+\ritem
+Three!
+\ritem
+Two!
+\ritem
+One!
+\ritem
+Go \ldots\ shoot!
+\end{renumerate}
+Counting down is not the cup of tea of the other blade.
+\begin{renumerate}{2}
+\ritem
+Three!
+\ritem
+Two!
+\ritem
+Oh, shoot.
+\end{renumerate}
+\end{challenge}
+
+\begin{challenge}[a cyclic order]
+In $dx\,dy$, $dy\,dz$, and $dz\,dx$, the basic $1$-forms $dx$, $dy$, and $dz$
+always appear in cyclic pairs. See Figure \ref{fig:cycle}.
+
+\begin{figure}[h]
+% Put your code here.
+
+\caption{The cyclic order of $dx$, $dy$, and $dz$.}
+\label{fig:cycle}
+\end{figure}
+\end{challenge}
+
+\begin{challenge}[Riemann sums]
+Some Riemann sums of $f(x):=x^2/3$ over $[0,3]$ are shown in Figure
+\ref{fig:riemann}.
+% Define \riemann here.
+
+\begin{figure}[h]
+\riemann{5}
+\riemann{10}
+
+\riemann{20}
+\riemann{40}
+\caption{The Riemann sums for $n=5$, $10$, $20$, and $40$.}
+\label{fig:riemann}
+\end{figure}
+\end{challenge}
+
+% Add some code for the bibliography here.
+
+\end{document}

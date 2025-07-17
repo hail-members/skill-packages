@@ -1,0 +1,216 @@
+\documentclass[11pt]{amsart}
+% You can import at most two packages here.
+\usepackage{hyperref}
+\usepackage{tikz}
+
+\theoremstyle{definition}
+\newtheorem{challenge}{Challenge}
+
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\R}{\mathbf{R}}
+% Define \barliminf here.
+\DeclareMathOperator*{\barliminf}{\underline{lim}}
+
+\begin{document}
+
+\title{An Intermediate Article}
+\author{Your Name$\,_\circ$} % Put your name here.
+% Add the address, email, and abstract here.
+\address{KAIST, 291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea}
+\email{your\_id@kaist.ac.kr}
+\begin{abstract}
+In this note, we prove that our \LaTeX\ is at an \mbox{intermediate level.}
+\end{abstract}
+
+\maketitle
+
+Reproduce this article as closely as possible (except your name and
+email address) by filling in the designated spots in the given
+\texttt{tex} file.
+The spots are marked with comments, and you cannot edit elsewhere.
+
+\begin{challenge}[citing a 1656 paper]
+$\binom{2n}{n} \sim 4^n/\sqrt{\pi n}$ follows from
+Wallis's product formula \cite{Wallis}.
+\end{challenge}
+
+\begin{challenge}[Fatou's lemma]
+% Define \barliminf in the preamble, below the definition of \R.
+If $f_n \to f$ a.s., then
+\[ \int f \,d\mu \le \barliminf_{n\to\infty} \int f_n \,d\mu. \]
+\end{challenge}
+
+\begin{challenge}[a summation]
+\[
+\sideset{}{'}\sum_{x\in A} f(x) =
+\sum_{\substack{x\in A \\ x\ne 0}} f(x).
+\]
+\end{challenge}
+
+\begin{challenge}[a superfluous statement]
+Consider real-valued functions $f_1$,$f_2$, $\ldots\,$, all defined on
+\[
+R := \left]-\infty,0\right[ \times \{0,1\} \equiv
+\bigl\{\,(x,y) \bigm| 0 < x < 1 \text{ and } y \in \{0,1\}\,\bigr\}.
+\]
+If $f_n = f_m$ a.e.\ for all $n,m \in \mathbf{N}$, then $f_n \to f$ a.e.\
+for some $f$.
+\end{challenge}
+
+\begin{challenge}[the harmonic series] The harmonic series diverges.
+\begin{proof}
+\[
+\begin{split}
+\sum_{n=1}^\infty \frac{1}{n} &=
+\frac{1}{1} + \underbrace{\frac{1}{2} + \frac{1}{3}}_2 +
+\underbrace{\frac{1}{4} + \frac{1}{5} + \frac{1}{6} + \frac{1}{7}}_4 \\
+&\quad + \underbrace{\frac{1}{8} + \frac{1}{9} + \frac{1}{10} + \frac{1}{11}
++ \frac{1}{12} + \frac{1}{13} + \frac{1}{14} + \frac{1}{15}}_8 + \cdots \\
+&\ge \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \cdots = \infty.
+\qedhere
+\end{split}
+\]
+\end{proof}
+\end{challenge}
+
+\begin{challenge}[a symbol that doesn't exist]
+$X \perp\!\!\!\perp Y$.
+\end{challenge}
+
+\begin{challenge}[Knuth's up-arrow notation]
+\[
+2\uparrow\uparrow k \stackrel{\mathrm{def}}{=}
+2^{2^{2^{\cdot^{\cdot^{\cdot^{2}}}}}} \raisebox{7pt}{$\Big\}\scriptstyle k$}.
+\]
+\end{challenge}
+
+% Define the environment tfprob and possibly some lengths and counters here.
+\newlength{\tfanslen}
+\settowidth{\tfanslen}{Ans: \rule{6ex}{0.2mm}}
+\newlength{\tfproblen}
+\setlength{\tfproblen}{\textwidth}
+\addtolength{\tfproblen}{-\tfanslen}
+\addtolength{\tfproblen}{-2ex}
+\newcounter{tfcnt}
+
+\newenvironment{tfprob}{%
+\addtocounter{tfcnt}{1}%
+\vspace{1em}\begin{minipage}[t]{\tfproblen}{\large \bfseries \thetfcnt.}}{%
+\end{minipage}\hspace{2ex}Ans: \rule{6ex}{0.2mm}\vspace{1em}}
+
+\begin{challenge}[true/false questions]
+Answer the following with T or F.
+
+\begin{tfprob}
+There exists a well-order on $\prec$ on $\R$ such that for any $x \in \R$
+the set $\{\,y \in \R \mid y \prec x\,\}$ is countable.
+\end{tfprob}
+
+\begin{tfprob}
+Ap\'ery's constant
+\[ \zeta(3) := \sum_{n=1}^\infty \frac{1}{n^3} \]
+is transcendental.
+\end{tfprob}
+
+\begin{tfprob}
+There exists a polynomial-time algorithm that determines if a given
+graph is $3$-colorable.
+\end{tfprob}
+\end{challenge}
+
+% You may add some code here.
+\renewcommand{\thechallenge}{10\protect\footnote{There is no iPhone 9 or
+Windows 9. Why should we have one?}}
+\begin{challenge}[a popular number]
+For each $n \in \N$, let $D(n)$ be the sum of all positive divisors of $n$.
+What is $\sum_{n=1}^9 D(n)$?
+
+\hfill Answer: \framebox[2cm]{\rule[-.5cm]{0pt}{1cm}}
+\end{challenge}
+
+% You may add some code here.
+\renewcommand{\thechallenge}{\arabic{challenge}}
+\addtocounter{challenge}{1}
+
+\begin{challenge}[countdown]
+% Define renumerate and \ritem here.
+\newenvironment{renumerate}[1]{%
+\begin{enumerate}
+\setcounter{enumi}{#1}
+\addtocounter{enumi}{1}
+}{%
+\end{enumerate}
+}
+\newcommand{\ritem}{\addtocounter{enumi}{-2}\item}
+
+A blade is aiming for the top.
+\begin{renumerate}{3}
+\ritem
+Three!
+\ritem
+Two!
+\ritem
+One!
+\ritem
+Go \ldots\ shoot!
+\end{renumerate}
+Counting down is not the cup of tea of the other blade.
+\begin{renumerate}{2}
+\ritem
+Three!
+\ritem
+Two!
+\ritem
+Oh, shoot.
+\end{renumerate}
+\end{challenge}
+
+\begin{challenge}[a cyclic order]
+In $dx\,dy$, $dy\,dz$, and $dz\,dx$, the basic $1$-forms $dx$, $dy$, and $dz$
+always appear in cyclic pairs. See Figure \ref{fig:cycle}.
+
+\begin{figure}[h]
+\begin{tikzpicture}
+	\draw (90:1.5) node {$dx$};
+	\draw (-30:1.5) node {$dy$};
+	\draw (210:1.5) node {$dz$};
+	\draw [->] (70:1.5) arc [radius=1.5, start angle=70, end angle=-10];
+	\draw [->] (-50:1.5) arc [radius=1.5, start angle=-50, end angle=-130];
+	\draw [->] (190:1.5) arc [radius=1.5, start angle=190, end angle=110];
+\end{tikzpicture}
+\caption{The cyclic order of $dx$, $dy$, and $dz$.}
+\label{fig:cycle}
+\end{figure}
+\end{challenge}
+
+\begin{challenge}[Riemann sums]
+Some Riemann sums of $f(x):=x^2/3$ over $[0,3]$ are shown in Figure
+\ref{fig:riemann}.
+% Define \riemann here.
+\newcommand{\riemann}[1]{%
+\begin{tikzpicture}
+	\foreach \k in {1,...,#1} {
+		\draw [fill=lightgray] ({3*(\k-1)/#1},0) rectangle
+			(3*\k/#1,{(3*(\k-1)/#1)^2/3});
+	}
+	\draw [->] (0,0) -- (3.5,0) node [below right] {$x$};
+	\draw [->] (0,0) -- (0,3.5) node [left] {$y$};
+	\draw [domain=0:3] plot (\x, {\x^2/3});
+\end{tikzpicture}
+}
+\begin{figure}[h]
+\riemann{5}
+\riemann{10}
+
+\riemann{20}
+\riemann{40}
+\caption{The Riemann sums for $n=5$, $10$, $20$, and $40$.}
+\label{fig:riemann}
+\end{figure}
+\end{challenge}
+
+% Add some code for the bibliography here.
+\begin{thebibliography}{Wal56}
+\bibitem[Wal56]{Wallis} Wallis, J. (1656). \textit{Arithmetica Infinitorum.} Oxford, England. Available at: archiv.org/details/ArithmeticalInfinitorum/page/n5 Available in English as \textit{The Arithmetic of Infinitesimals} (2004). (Stedall, J. A., trans.) New York, NY: Springer-Verlag.
+\end{thebibliography}
+\end{document}
